@@ -20,7 +20,12 @@
     };
 };
 
-//スクロールの調整
+// Hold-Tapの調整
+&mt {
+    tapping-term-ms = <100>;
+};
+
+// スクロールの調整
 &msc {
     time-to-max-speed-ms = <0>;   // 即座に最大速度（加速なし）
     acceleration-exponent = <0>;   // 加速なし
