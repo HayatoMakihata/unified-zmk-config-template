@@ -29,39 +29,53 @@
 /{
     combos {
         compatible = "zmk,combos";
-		//左クリックのコンボ 19,20
+		// LCLK 19,20
 	    combo_LCLK {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&mkp LCLK>;
         };
 
-		//右クリックのコンボ 20,21
+		//RCLK 20,21
         combo_RCLK {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&mkp RCLK>;
         };
 
-		//ホイールクリックのコンボ 19,21
+		// MCLK 19,21
 	    combo_MCLK {
             timeout-ms = <70>;
             key-positions = <19 21>;
             bindings = <&mkp MCLK>;
         };
 
-		//MB4クリックのコンボ 31,32
+		// MB4 31,32
 	    combo_MB4 {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&mkp MB4>;
         };
 
-		//MB5クリックのコンボ 32,33
+		// MB5 32,33
 	    combo_MB5 {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&mkp MB5>;
+        };
+
+		// LANG1 15,16
+	    combo_LANG1 {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LANG1>;
+        };
+
+		// LANG2 14,15
+	    combo_LANG2 {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LANG2>;
         };
 
     };
