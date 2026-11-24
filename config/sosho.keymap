@@ -29,25 +29,39 @@
 /{
     combos {
         compatible = "zmk,combos";
-		//左クリックのコンボ 19はJのキー 20はKのキーに相当します。
+		//左クリックのコンボ 19,20
 	    combo_LCLK {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&mkp LCLK>;
         };
 
-		//右クリックのコンボ 20 K 21 L
+		//右クリックのコンボ 20,21
         combo_RCLK {
             timeout-ms = <50>;
             key-positions = <20 21>;
             bindings = <&mkp RCLK>;
         };
 
-		//ホイールクリックのコンボ 19 J 21 L
+		//ホイールクリックのコンボ 19,21
 	    combo_MCLK {
-            timeout-ms = <90>;
+            timeout-ms = <70>;
             key-positions = <19 21>;
             bindings = <&mkp MCLK>;
+        };
+
+		//MB4クリックのコンボ 31,32
+	    combo_MB4 {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mkp MB4>;
+        };
+
+		//MB5クリックのコンボ 32,33
+	    combo_MB5 {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&mkp MB5>;
         };
 
     };
@@ -59,10 +73,10 @@ keymap {
 
     default_layer {
         bindings = <
-            &kp TAB    &kp Q   &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-            &kp LCTRL  &kp A   &kp S  &kp D  &kp F  &kp G      &kp H  &kp J  &kp K      &kp L    &kp SQT   &kp ENTER
-            &kp LSHFT  &kp Z   &kp X  &kp C  &kp V  &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH &kp LSHFT
-            &kp ESC    &kp LALT              &mo 2  &kp SPACE  &mo 1  &kp LA(GRAVE)              &mo 3     &kp LGUI
+            &kp ESC       &kp Q   &kp W  &kp E  &kp R  &kp T              &kp Y           &kp U  &kp I      &kp O    &kp P     &kp LGUI
+            &kp TAB       &kp A   &kp S  &kp D  &kp F  &kp G              &kp H           &kp J  &kp K      &kp L    &kp MINUS &kp LALT
+            &kp LC(LS(S)) &kp Z   &kp X  &kp C  &kp V  &kp B              &kp N           &kp M  &kp COMMA  &kp DOT  &kp UNDER &kp LA(LG(S))
+            &kp K_UNDO    &kp K_REDO            &mo 2  &mt SPACE LCTRL    &mt ENTER LSHFT &mo 1                      &kp BSPC  &kp DEL
         >;
 		//&ec_ms_lとrは、上のビヘイビアで作ったもの。
         sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
@@ -70,10 +84,10 @@ keymap {
 	
     layer_1 {
         bindings = <
-            &kp GRAVE &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &kp N6    &kp N7   &kp N8   &kp N9    &kp N0 &kp DEL
-            &trans    &trans &trans &trans &trans &trans           &kp PG_UP &kp HOME &kp UP   &kp END   &trans &trans
-            &trans    &trans &trans &trans &trans &trans           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-            &trans    &trans               &trans &trans           &trans    &trans                      &trans &trans
+            &trans &trans &trans   &kp UP   &trans    &trans      &trans    &kp KP_N7 &kp KP_N8 &kp KP_N9 &trans &trans
+            &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans      &trans    &kp KP_N4 &kp KP_N5 &kp KP_N6 &trans &trans
+            &trans &trans &trans   &trans   &trans    &trans      &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans &trans
+            &trans &trans                   &trans    &trans      &trans    &trans                        &trans &trans
         >;
     };
 
