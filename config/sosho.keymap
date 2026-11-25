@@ -31,6 +31,16 @@
     acceleration-exponent = <0>;   // 加速なし
 };
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
+
 /{
     combos {
         compatible = "zmk,combos";
