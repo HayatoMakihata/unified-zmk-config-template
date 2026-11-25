@@ -97,10 +97,10 @@ keymap {
 	
     layer_1 {
         bindings = <
-            &trans  &kp LC(LSHFT)  &kp HOME  &kp UP     &kp PG_UP  &LANG1       &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none   &trans
-            &trans  &kp LSHFT      &kp LEFT  &kp DOWN   &kp RIGHT  &LANG2       &kp KP_DOT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &none   &trans
-            &trans  &kp LCTRL      &kp END   &kp K_APP  &kp PG_DN  &none        &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none   &trans
-            &trans  &trans                              &trans     &trans       &trans      &trans                           &trans  &trans
+            &trans  &kp LC(LSHFT)  &kp HOME  &kp UP     &kp PG_UP  &kp LANG1       &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none   &trans
+            &trans  &kp LSHFT      &kp LEFT  &kp DOWN   &kp RIGHT  &kp LANG2       &kp KP_DOT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &none   &trans
+            &trans  &kp LCTRL      &kp END   &kp K_APP  &kp PG_DN  &none           &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3  &none   &trans
+            &trans  &trans                              &trans     &trans          &trans      &trans                           &trans  &trans
         >;
         sensor-bindings = <&ec_ms_l LC(LEFT) LC(RIGHT)  &ec_ms_r LC(DOWN) LC(UP)>;
     };
