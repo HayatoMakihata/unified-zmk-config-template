@@ -117,10 +117,10 @@ keymap {
 
     layer_3 {
         bindings = <
-            &trans  &none         &none         &none         &none         &none             &none   &kp F7  &kp F8  &kp F9  &kp F10  &trans
-            &trans  &none         &none         &none         &none         &none             &none   &kp F4  &kp F5  &kp F6  &kp F11  &trans
-            &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &kp F1  &kp F2  &kp F3  &kp F12  &trans
-            &trans  &trans                                    &trans        &trans            &trans  &out OUT_BLE            &trans   &trans
+            &trans  &none         &none         &none         &none         &sys_reset          &none   &kp F7  &kp F8  &kp F9  &kp F10  &trans
+            &trans  &none         &none         &none         &none         &studio_unlock      &none   &kp F4  &kp F5  &kp F6  &kp F11  &trans
+            &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none   &kp F1  &kp F2  &kp F3  &kp F12  &trans
+            &trans  &trans                                    &trans        &trans              &trans  &out OUT_BLE            &trans   &trans
         >;
         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP  &ec_ms_r C_BRI_DN C_BRI_UP>;
     };
